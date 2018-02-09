@@ -1,10 +1,9 @@
 #include <algorithm>
 #include "region.h"
-#include "ansi_screen.h"
 
 RegionCmd Region::handleKeyboard()
 {
-	parent_->setMode(Mode::Normal);
+	setMode(Mode::Normal);
 	bool _leaveHandler{false};
 
 	while(!_leaveHandler) {
@@ -22,11 +21,11 @@ RegionCmd Region::handleKeyboard()
 				moveRight();
 				break;
 			case 'i':
-				parent_->saveCursor();
-				parent_->setMode(Mode::Insert);
+				saveCursor();
+				setMode(Mode::Insert);
 				std::cin.get(_inputBuf, 4095);
-				parent_->setMode(Mode::Normal);
-				parent_->restoreCursor();
+				setMode(Mode::Normal);
+				restoreCursor();
 				break;
 			case 'd':
 				// Clear to the end of line
@@ -80,7 +79,7 @@ bool Region::loadContent(std::string& source)
 		_sEnd = _strBuf.find_first_of('\n', _sBegin);
 	}
 	refresh();
-	parent_->moveCursor(left_, top_);
+	moveCursor(left_, top_);
 
 	return true;
 }
@@ -88,20 +87,20 @@ bool Region::loadContent(std::string& source)
 void Region::clear()
 {
 	for(int row=0; row < height_ - 2; ++row) {
-		parent_->moveCursor(left_, top_ + row);
+		moveCursor(left_, top_ + row);
 		std::cout << std::string(width_ - 1, ' ');
 	}
 }
 
 void Region::refresh()
 {
-	parent_->saveCursor();
+	saveCursor();
 	clear();
 	for(int row=viewTop_; row < viewTop_ + height_ - 2; ++row) {
-		parent_->moveCursor(left_, top_ + row - viewTop_);
+		moveCursor(left_, top_ + row - viewTop_);
 		std::cout << contents_[viewTop_ + row].substr(viewLeft_, width_);
 	}
-	parent_->restoreCursor();
+	restoreCursor();
 }
 
 void Region::moveUp()

@@ -8,12 +8,21 @@ void Container::introduce(const std::string& who)
 
 void Container::addChild(const std::string& name, Child&& child)
 {
-	children_.insert(std::make_pair(name, std::make_shared<Child>(child)));
+	std::cerr << "rvalue usage for addChild" << std::endl;
+
+	auto _child = std::make_shared<Child>(child);
+	_child->setContainerFunc([this](const std::string& s) { return this->introduce(s); });
+
+	children_.insert(std::make_pair(name, _child));
 }
 
 void Container::addChild(const std::string& name, const Child& child)
 {
-	children_.insert(std::make_pair(name, std::make_shared<Child>(child)));
+	std::cerr << "const Child& usage for addChild" << std::endl;
+
+	auto _child = std::make_shared<Child>(child);
+	_child->setContainerFunc([this](const std::string& s) { return this->introduce(s); });
+	children_.insert(std::make_pair(name, _child));
 }
 
 std::shared_ptr<Child>& Container::findChild(const std::string& name)
@@ -23,4 +32,15 @@ std::shared_ptr<Child>& Container::findChild(const std::string& name)
 		throw false;
 
 	return _childIt->second;
+}
+
+void Container::countRefs(const std::string& name) const
+{
+	auto _childIt = children_.find(name);
+	if (_childIt != children_.end()) {
+		std::cout << "Count of " << name << " is " << _childIt->second.use_count() << std::endl;
+	}
+	else {
+		std::cerr << "Did not found: " << name << std::endl;
+	}
 }

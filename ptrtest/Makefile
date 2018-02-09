@@ -3,9 +3,8 @@ CFLAGS=-c -Wall -std=c++14
 SRC=$(wildcard src/*.cpp)
 OBJ=$(addprefix obj/, $(notdir $(SRC:.cpp=.o)))
 
-all: clean tester
-	echo "Rebuided"
-
+all: clean tester run
+	
 tester: $(OBJ) | bin
 	$(CC) $(LFLABS) -o bin/$@ $^
 

@@ -5,10 +5,9 @@
 #include <vector>
 #include <iterator>
 #include <memory>
+#include <functional>
 
-class AnsiScreen;
-enum class RegionCmd;
-
+#include "commons.h"
 
 class Region
 {
@@ -23,11 +22,16 @@ class Region
 	int viewLeft_;
 //	int viewRight_;
 
-	std::shared_ptr<AnsiScreen> parent_;
 	std::vector<std::string> contents_;
 
+	// Screen methods used by region
+	std::function<void()> saveCursor;
+	std::function<void()> restoreCursor;
+	std::function<void(Mode)> setMode;
+	std::function<void(int, int)> moveCursor;
+
 public:
-    Region(std::shared_ptr<AnsiScreen> screen, int left, int top, int width, int height)
+    Region(int left, int top, int width, int height)
         : top_(top)
 		, left_(left)
 		, width_(width)
@@ -38,11 +42,16 @@ public:
 		, viewBottom_(height - 2)
 	  	, viewLeft_(0)
 //	 	, viewRight_(width - 2)
-		, parent_(screen)
     {}
 
 	bool loadContent(std::string& source);
     RegionCmd handleKeyboard();
+
+	// Screen method setters
+	void setSaveCursor(std::function<void()> pSaveCursor) { saveCursor = pSaveCursor; }
+	void setRestoreCursor(std::function<void()> pRestoreCursor) { restoreCursor = pRestoreCursor; }
+	void setSetMode(std::function<void(Mode)> pSetMode) { setMode = pSetMode; }
+	void setMoveCursor(std::function<void(int, int)> pMoveCursor) { moveCursor = pMoveCursor; }
 
 private:
 	void clear();

@@ -144,8 +144,13 @@ bool AnsiScreen::gotoPoint(std::string pointName) const
 	return false;
 }
 
-RegionPtr AnsiScreen::createRegion(const std::string& regionName, int left, int top, int width, int height)
+CreateRes AnsiScreen::createRegion(const std::string& regionName, int left, int top, int width, int height)
 {
-	// Below method would return pair: <newly created element, boolean - true if inserted, false otherwise>
-	return regions_.insert(std::make_pair(regionName, RegionPtr(new Region(shared_from_this(), left, top, width, height)))).first->second;
+	auto _region = std::make_shared<Region>(Region(left, top, width, height));
+	_region->setSetMode([this](Mode mode) { return this->setMode(mode); });
+	_region->setSaveCursor([this]() { return this->saveCursor(); });
+	_region->setRestoreCursor([this]() { return this->restoreCursor(); });
+	_region->setMoveCursor([this](int x, int y) { return this->moveCursor(x, y); });
+
+	return regions_.insert(std::make_pair(regionName, _region));
 }

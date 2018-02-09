@@ -48,19 +48,27 @@ int main(int argc, char** argv)
 	_if.close();
 
 
-	RegionPtr _region = scr.createRegion("LTRegion", 2, 2, scr.columns() / 2 - 1, scr.rows() / 2 - 1);
-	_region->loadContent(_content);
+	// Pair, 1 - iterator to map location of regiong, 2 - (bool) does insertion took place
+	CreateRes _region = scr.createRegion("LTRegion", 2, 2, scr.columns() / 2 - 1, scr.rows() / 2 - 1);
+	if (_region.second) {
+		// We deal with map location: first - key, second - Region
+		RegionPtr& _rp(_region.first->second);
+		_rp->loadContent(_content);
 
-	switch(_region->handleKeyboard()) {
-		case RegionCmd::Command:
-			std::cout << "Process region command";
-			break;
-		case RegionCmd::Escape:
-			std::cout << "Process region escape";
-			break;
-		case RegionCmd::Tab:
-			std::cout << "Switch focus to next one";
-			break;
+		switch(_rp->handleKeyboard()) {
+			case RegionCmd::Command:
+				std::cout << "Process region command";
+				break;
+			case RegionCmd::Escape:
+				std::cout << "Process region escape";
+				break;
+			case RegionCmd::Tab:
+				std::cout << "Switch focus to next one";
+				break;
+		}
+	}
+	else {
+		std::cerr << "Region: LTRegion already exists" << std::endl;
 	}
 	std::cin.get();
 

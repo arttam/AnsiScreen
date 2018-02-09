@@ -4,6 +4,8 @@ LFLAGS=-L../ansi_console_lib/lib -lansiscreen -Wl,-rpath='$$ORIGIN/../../ansi_co
 SRC=$(wildcard src/*.cpp)
 OBJ=$(addprefix obj/, $(notdir $(SRC:.cpp=.o)))
 
+all: clean run
+
 ac: $(OBJ)
 	$(CC) $(LFLAGS) -o bin/$@ $^
 

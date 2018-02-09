@@ -4,6 +4,8 @@ LFLABS=-shared -fPIC
 SRC=$(wildcard src/*.cpp)
 OBJ=$(addprefix obj/, $(notdir $(SRC:.cpp=.o)))
 
+all: clean libansiscreen.so
+
 libansiscreen.so: $(OBJ)
 	$(CC) $(LFLABS) -o lib/$@ $^
 

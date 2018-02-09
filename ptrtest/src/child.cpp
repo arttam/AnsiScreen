@@ -3,5 +3,11 @@
 
 void Child::sayMyName()
 {
-	std::cout << "Local name is: " << childName_ << std::endl;
+	contanerFunc_(childName_);
 }
+
+void Child::setContainerFunc(std::function<void(const std::string&)> func)
+{
+	contanerFunc_ = func;
+}
+
