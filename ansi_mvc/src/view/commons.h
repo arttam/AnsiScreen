@@ -22,4 +22,8 @@ static const char VerticalLine[]      =  "\e(0\x78\e(B"; // 186 Vertical Line
 static const char ToAltScr[]          = "?47h";
 static const char ToOrigScr[]         = "?47l";
 
+// Colors
+static const char SelectedColor[] = "\x1b[30;47m";
+static const char DefaultColor[]  = "\x1b[47;30m";
+
 #endif

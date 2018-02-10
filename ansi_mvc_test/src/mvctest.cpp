@@ -49,28 +49,30 @@ int main()
 		return 1;
 	}
 
-	model.setViewArea(view.columns() / 2 - 2, view.rows() / 2 - 2);
-	model.showViewModel(2, 2, [&view](int x, int y) { view.moveCursor(x, y); });
+	model.setViewArea(view.columns() / 2 - 2, view.rows() / 2 - 2, 2, 2, [&view](int x, int y) { view.moveCursor(x, y); });
+	model.showViewModel();
 	view.gotoPoint("LeftTop");
 
 	auto moveDown = [&view, &model]() {
 		model.moveDown();
-		if (model.moveCursor())
+		if (model.moveCursor()) {
 			view.moveDown();
+		}
 		if (model.needRefresh()) {
 			view.saveCursor();
-			model.showViewModel(2, 2, [&view](int x, int y) { view.moveCursor(x, y); });
+			model.showViewModel();
 			view.restoreCursor();
 		}
 	};
 
 	auto moveUp = [&view, &model]() {
 		model.moveUp();
-		if (model.moveCursor())
+		if (model.moveCursor()) {
 			view.moveUp();
+		}
 		if (model.needRefresh()) {
 			view.saveCursor();
-			model.showViewModel(2, 2, [&view](int x, int y) { view.moveCursor(x, y); });
+			model.showViewModel();
 			view.restoreCursor();
 		}
 	};

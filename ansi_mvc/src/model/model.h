@@ -10,12 +10,16 @@ class Model
 	int height_;
 	int xOffset_;
 	int yOffset_;
+	int fromX_;
+	int fromY_;
 
 	bool needRefresh_;
 	bool moveCursor_;
+	int prevRow_;
 	std::pair<int, int> currPos_;
 	std::string wiper_;
 	std::vector<std::string> contents_;
+	std::function<void(int, int)> moveFunc_;
 
 public:
 	Model() = default;
@@ -29,8 +33,11 @@ public:
 	bool needRefresh() const { return needRefresh_; }
 	bool moveCursor()  const { return moveCursor_; }
 
-	void setViewArea(int width, int height);
+	void setViewArea(int width, int height, int fromX, int fromY, std::function<void(int,int)> moveFunc);
 	bool loadContent();
-	void showViewModel(int fromx, int fromy, std::function<void(int,int)> moveFunc);
+	void showViewModel();
+
+private:
+	void markSelected();
 };
 #endif
