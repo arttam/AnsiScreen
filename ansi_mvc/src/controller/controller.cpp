@@ -15,8 +15,7 @@ void Controller::startHandler()
 {
 	keepRunning_ = true;
 	while(keepRunning_) {
-		char _ch = std::getchar();
-		auto _cmd = actions_.find(_ch);
+		auto _cmd = actions_.find(std::getchar());
 		if (_cmd != actions_.end()) {
 			_cmd->second();
 		}

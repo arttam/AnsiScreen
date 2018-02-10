@@ -96,7 +96,7 @@ void Region::refresh()
 {
 	saveCursor();
 	clear();
-	for(int row=viewTop_; row < viewTop_ + height_ - 2; ++row) {
+	for(int row=viewTop_; row < (viewTop_ + height_ - 2)  && row < static_cast<int>(contents_.size()); ++row) {
 		moveCursor(left_, top_ + row - viewTop_);
 		std::cout << contents_[viewTop_ + row].substr(viewLeft_, width_);
 	}
