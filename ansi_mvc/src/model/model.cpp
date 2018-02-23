@@ -6,8 +6,6 @@
 
 #include "model.h"
 
-const char docPath[] = "/home/art/.vimrc";
-
 void Model::markSelected()
 {
 	// Unmark previous
@@ -73,21 +71,14 @@ void Model::moveRight()
 
 }
 
-void Model::showViewModel()
+void Model::showViewModel(bool markSelected)
 {
 	for(int row = 0, fromy = fromY_; row < height_ && (row + yOffset_) < static_cast<int>(contents_.size()); ++row, ++fromy) {
-		const char* color = (row == currPos_.second ? "\x1b[33;44m" : "\x1b[37;40m");
+		const char* color = (markSelected ? (row == currPos_.second ? "\x1b[33;44m" : "\x1b[37;40m") : "\x1b[37;40m");
 		moveFunc_(fromX_, fromy);
 		std::cout << color << wiper_;
 		moveFunc_(fromX_, fromy);
 		std::cout << contents_[yOffset_ + row].substr(xOffset_, width_);
-
-		/*
-		moveFunc_(fromX_, fromy);
-		std::cout << color << wiper_;
-		moveFunc_(fromX_, fromy);
-		std::cout << contents_[yOffset_ + row].substr(xOffset_, width_);
-		*/
 	}
 }
 
@@ -109,17 +100,13 @@ void Model::setViewArea(int width, int height, int fromX, int fromY, std::functi
 	moveFunc_ = moveFunc;
 }
 
-bool Model::loadContent()
+bool Model::loadContent(std::vector<std::string>&& src)
 {
-	std::ifstream ifs(docPath);
-	if (ifs) {
-		std::string _line;
-		while (!ifs.eof()) {
-			std::getline(ifs, _line);
-			contents_.push_back(_line);
-		}
-		ifs.close();
-		return true;
-	}
-	return false;
+	contents_ = src;
+	return true;
+}
+
+const std::string& Model::getSelected() const
+{
+	return contents_[yOffset_ + currPos_.second];
 }

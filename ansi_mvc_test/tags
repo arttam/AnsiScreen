@@ -1,0 +1,237 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.8	//
+AnsiScreen	../ansi_console_lib/src/ansi_screen.cpp	/^AnsiScreen::AnsiScreen()$/;"	f	class:AnsiScreen
+AnsiScreen	../ansi_console_lib/src/ansi_screen.h	/^class AnsiScreen: std::enable_shared_from_this<AnsiScreen>$/;"	c
+BottomCross	../ansi_console_lib/src/commons.h	/^static const char BottomCross[]       =  "\\e(0\\x76\\e(B"; \/\/ 202 Bottom Cross$/;"	v
+BottomCross	../ansi_mvc/src/view/commons.h	/^static const char BottomCross[]       =  "\\e(0\\x76\\e(B"; \/\/ 202 Bottom Cross$/;"	v
+CC	../ansi_console_lib/Makefile	/^CC=clang++$/;"	m
+CC	../ansi_lib_test/Makefile	/^CC=clang++$/;"	m
+CC	../ansi_mvc/Makefile	/^CC=clang++$/;"	m
+CC	../ansi_mvc_test/Makefile	/^CC=clang++$/;"	m
+CC	../ptrtest/Makefile	/^CC=g++$/;"	m
+CFLAGS	../ansi_console_lib/Makefile	/^CFLAGS=-c -Wall -std=c++17 -fPIC$/;"	m
+CFLAGS	../ansi_lib_test/Makefile	/^CFLAGS=-c -Wall -std=c++17$/;"	m
+CFLAGS	../ansi_mvc/Makefile	/^CFLAGS=-c -Wall -std=c++17 -fPIC$/;"	m
+CFLAGS	../ansi_mvc_test/Makefile	/^CFLAGS=-c -Wall -std=c++17$/;"	m
+CFLAGS	../ptrtest/Makefile	/^CFLAGS=-c -Wall -std=c++14 $/;"	m
+CONTROLLEROBJ	../ansi_mvc/Makefile	/^CONTROLLEROBJ=$(addprefix obj\/, $(notdir $(CONTROLLERSRC:.cpp=.o)))$/;"	m
+CONTROLLERSRC	../ansi_mvc/Makefile	/^CONTROLLERSRC=$(wildcard src\/controller\/*.cpp)$/;"	m
+CSI	../ansi_console_lib/src/commons.h	/^static const char *CSI = "\\x1b[";$/;"	v
+CSI	../ansi_mvc/src/view/commons.h	/^static const char *CSI = "\\x1b[";$/;"	v
+Child	../ptrtest/src/child.h	/^	Child(Child* pSrc): childName_(pSrc->childName_) {}$/;"	f	class:Child
+Child	../ptrtest/src/child.h	/^	Child(const Child& src): childName_(src.childName_) {}$/;"	f	class:Child
+Child	../ptrtest/src/child.h	/^	Child(const std::string& src): childName_(src) {}$/;"	f	class:Child
+Child	../ptrtest/src/child.h	/^class Child$/;"	c
+Command	../ansi_console_lib/src/commons.h	/^enum class Mode { Command, Insert, Normal };$/;"	m	class:Mode
+Command	../ansi_console_lib/src/commons.h	/^enum class RegionCmd { Tab, Command, Escape };$/;"	m	class:RegionCmd
+Command	../ansi_mvc/src/view/commons.h	/^enum class Mode { Command, Insert, Normal };$/;"	m	class:Mode
+Command	../ansi_mvc/src/view/commons.h	/^enum class RegionCmd { Tab, Command, Escape };$/;"	m	class:RegionCmd
+Container	../ptrtest/src/container.h	/^class Container$/;"	c
+Controller	../ansi_mvc/src/controller/controller.h	/^class Controller$/;"	c
+DBEntry	../ansi_mvc/src/rdb/rdb.h	/^struct DBEntry$/;"	s
+DefaultColor	../ansi_mvc/src/view/commons.h	/^static const char DefaultColor[]  = "\\x1b[47;30m";$/;"	v
+HorizontalLine	../ansi_console_lib/src/commons.h	/^static const char HorizontalLine[]    =  "\\e(0\\x71\\e(B"; \/\/ 205 Horizontal Line$/;"	v
+HorizontalLine	../ansi_mvc/src/view/commons.h	/^static const char HorizontalLine[]    =  "\\e(0\\x71\\e(B"; \/\/ 205 Horizontal Line$/;"	v
+Insert	../ansi_console_lib/src/commons.h	/^enum class Mode { Command, Insert, Normal };$/;"	m	class:Mode
+Insert	../ansi_mvc/src/view/commons.h	/^enum class Mode { Command, Insert, Normal };$/;"	m	class:Mode
+LDBFLAGS	../ansi_mvc/Makefile	/^LDBFLAGS=-shared -fPIC -lsqlite3$/;"	m
+LFLABS	../ansi_console_lib/Makefile	/^LFLABS=-shared -fPIC$/;"	m
+LFLAGS	../ansi_lib_test/Makefile	/^LFLAGS=-L..\/ansi_console_lib\/lib -lansiscreen -Wl,-rpath='$$ORIGIN\/..\/..\/ansi_console_lib\/lib\/'$/;"	m
+LFLAGS	../ansi_mvc/Makefile	/^LFLAGS=-shared -fPIC$/;"	m
+LFLAGS	../ansi_mvc_test/Makefile	/^LFLAGS=-L..\/ansi_mvc\/lib -lansicontroller -lansimodel -lansiview -lrdbmodel -Wl,-rpath='$$ORIGIN\/..\/..\/ansi_mvc\/lib\/'$/;"	m
+LeftBottomCorner	../ansi_console_lib/src/commons.h	/^static const char LeftBottomCorner[]  =  "\\e(0\\x6d\\e(B"; \/\/ 200 Left Bottom corner$/;"	v
+LeftBottomCorner	../ansi_mvc/src/view/commons.h	/^static const char LeftBottomCorner[]  =  "\\e(0\\x6d\\e(B"; \/\/ 200 Left Bottom corner$/;"	v
+LeftCross	../ansi_console_lib/src/commons.h	/^static const char LeftCross[]         =  "\\e(0\\x74\\e(B"; \/\/ 204 Left Cross$/;"	v
+LeftCross	../ansi_mvc/src/view/commons.h	/^static const char LeftCross[]         =  "\\e(0\\x74\\e(B"; \/\/ 204 Left Cross$/;"	v
+LeftTopCorner	../ansi_console_lib/src/commons.h	/^static const char LeftTopCorner[]     =  "\\e(0\\x6c\\e(B"; \/\/ 201 Left Top cornet$/;"	v
+LeftTopCorner	../ansi_mvc/src/view/commons.h	/^static const char LeftTopCorner[]     =  "\\e(0\\x6c\\e(B"; \/\/ 201 Left Top cornet$/;"	v
+MODELOBJ	../ansi_mvc/Makefile	/^MODELOBJ=$(addprefix obj\/, $(notdir $(MODELSRC:.cpp=.o)))$/;"	m
+MODELSRC	../ansi_mvc/Makefile	/^MODELSRC=$(wildcard src\/model\/*.cpp)$/;"	m
+MiddleCross	../ansi_console_lib/src/commons.h	/^static const char MiddleCross[]       =  "\\e(0\\x6e\\e(B"; \/\/ 206 Midle Cross$/;"	v
+MiddleCross	../ansi_mvc/src/view/commons.h	/^static const char MiddleCross[]       =  "\\e(0\\x6e\\e(B"; \/\/ 206 Midle Cross$/;"	v
+Mode	../ansi_console_lib/src/commons.h	/^enum class Mode { Command, Insert, Normal };$/;"	c
+Mode	../ansi_mvc/src/view/commons.h	/^enum class Mode { Command, Insert, Normal };$/;"	c
+Model	../ansi_mvc/src/model/model.h	/^class Model$/;"	c
+OBJ	../ansi_console_lib/Makefile	/^OBJ=$(addprefix obj\/, $(notdir $(SRC:.cpp=.o)))$/;"	m
+OBJ	../ansi_lib_test/Makefile	/^OBJ=$(addprefix obj\/, $(notdir $(SRC:.cpp=.o)))$/;"	m
+OBJ	../ansi_mvc_test/Makefile	/^OBJ=$(addprefix obj\/, $(notdir $(SRC:.cpp=.o)))$/;"	m
+OBJ	../ptrtest/Makefile	/^OBJ=$(addprefix obj\/, $(notdir $(SRC:.cpp=.o)))$/;"	m
+RDBData	../ansi_mvc/src/rdb/rdb.cpp	/^RDBData::RDBData(const char *dbPath):db_(dbPath)$/;"	f	class:RDBData
+RDBData	../ansi_mvc/src/rdb/rdb.h	/^class RDBData$/;"	c
+RDBOBJ	../ansi_mvc/Makefile	/^RDBOBJ=$(addprefix obj\/, $(notdir $(RDBSRC:.cpp=.o)))$/;"	m
+RDBSRC	../ansi_mvc/Makefile	/^RDBSRC=$(wildcard src\/rdb\/*.cpp)$/;"	m
+Region	../ansi_console_lib/src/region.h	/^    Region(int left, int top, int width, int height)$/;"	f	class:Region
+Region	../ansi_console_lib/src/region.h	/^class Region$/;"	c
+RegionCmd	../ansi_console_lib/src/commons.h	/^enum class RegionCmd { Tab, Command, Escape };$/;"	c
+RegionCmd	../ansi_mvc/src/view/commons.h	/^enum class RegionCmd { Tab, Command, Escape };$/;"	c
+RightBottomCorner	../ansi_console_lib/src/commons.h	/^static const char RightBottomCorner[] =  "\\e(0\\x6a\\e(B"; \/\/ 188 Right Bottom corner$/;"	v
+RightBottomCorner	../ansi_mvc/src/view/commons.h	/^static const char RightBottomCorner[] =  "\\e(0\\x6a\\e(B"; \/\/ 188 Right Bottom corner$/;"	v
+RightCross	../ansi_console_lib/src/commons.h	/^static const char RightCross[]        =  "\\e(0\\x75\\e(B"; \/\/ 185 Right Cross$/;"	v
+RightCross	../ansi_mvc/src/view/commons.h	/^static const char RightCross[]        =  "\\e(0\\x75\\e(B"; \/\/ 185 Right Cross$/;"	v
+RightTopCorner	../ansi_console_lib/src/commons.h	/^static const char RightTopCorner[] 	  =  "\\e(0\\x6b\\e(B"; \/\/ 187 Right Top corner$/;"	v
+RightTopCorner	../ansi_mvc/src/view/commons.h	/^static const char RightTopCorner[] 	  =  "\\e(0\\x6b\\e(B"; \/\/ 187 Right Top corner$/;"	v
+SRC	../ansi_console_lib/Makefile	/^SRC=$(wildcard src\/*.cpp)$/;"	m
+SRC	../ansi_lib_test/Makefile	/^SRC=$(wildcard src\/*.cpp)$/;"	m
+SRC	../ansi_mvc_test/Makefile	/^SRC=$(wildcard src\/*.cpp)$/;"	m
+SRC	../ptrtest/Makefile	/^SRC=$(wildcard src\/*.cpp)$/;"	m
+SelectedColor	../ansi_mvc/src/view/commons.h	/^static const char SelectedColor[] = "\\x1b[30;47m";$/;"	v
+Tab	../ansi_console_lib/src/commons.h	/^enum class RegionCmd { Tab, Command, Escape };$/;"	m	class:RegionCmd
+Tab	../ansi_mvc/src/view/commons.h	/^enum class RegionCmd { Tab, Command, Escape };$/;"	m	class:RegionCmd
+ToAltScr	../ansi_console_lib/src/commons.h	/^static const char ToAltScr[]          = "?47h";$/;"	v
+ToAltScr	../ansi_mvc/src/view/commons.h	/^static const char ToAltScr[]          = "?47h";$/;"	v
+ToOrigScr	../ansi_console_lib/src/commons.h	/^static const char ToOrigScr[]         = "?47l";$/;"	v
+ToOrigScr	../ansi_mvc/src/view/commons.h	/^static const char ToOrigScr[]         = "?47l";$/;"	v
+TopCross	../ansi_console_lib/src/commons.h	/^static const char TopCross[]          =  "\\e(0\\x77\\e(B"; \/\/ 203 Top Cross$/;"	v
+TopCross	../ansi_mvc/src/view/commons.h	/^static const char TopCross[]          =  "\\e(0\\x77\\e(B"; \/\/ 203 Top Cross$/;"	v
+VIEWOBJ	../ansi_mvc/Makefile	/^VIEWOBJ=$(addprefix obj\/, $(notdir $(VIEWSRC:.cpp=.o)))$/;"	m
+VIEWSRC	../ansi_mvc/Makefile	/^VIEWSRC=$(wildcard src\/view\/*.cpp)$/;"	m
+VerticalLine	../ansi_console_lib/src/commons.h	/^static const char VerticalLine[]      =  "\\e(0\\x78\\e(B"; \/\/ 186 Vertical Line$/;"	v
+VerticalLine	../ansi_mvc/src/view/commons.h	/^static const char VerticalLine[]      =  "\\e(0\\x78\\e(B"; \/\/ 186 Vertical Line$/;"	v
+View	../ansi_mvc/src/view/view.cpp	/^View::View(bool useAltScreen):usesAltScreen_(useAltScreen)$/;"	f	class:View
+View	../ansi_mvc/src/view/view.h	/^class View$/;"	c
+__USES_CHILD_H__	../ptrtest/src/child.h	2;"	d
+__USES_COMMONS_H__	../ansi_console_lib/src/commons.h	2;"	d
+__USES_COMMONS_H__	../ansi_mvc/src/view/commons.h	2;"	d
+__USES_CONTAINER_H__	../ptrtest/src/container.h	2;"	d
+__USES_CONTROLLER_H__	../ansi_mvc/src/controller/controller.h	2;"	d
+__USES_MODEL_H__	../ansi_mvc/src/model/model.h	2;"	d
+__USES_RDB_H__	../ansi_mvc/src/rdb/rdb.h	2;"	d
+__USES_REGION_H__	../ansi_console_lib/src/region.h	2;"	d
+__USES_VIEW_H__	../ansi_mvc/src/view/view.h	2;"	d
+__UsesAnsiScreen__	../ansi_console_lib/src/ansi_screen.h	2;"	d
+_inputBuf	../ansi_console_lib/src/commons.h	/^static char _inputBuf[4096];$/;"	v
+_inputBuf	../ansi_mvc/src/view/commons.h	/^static char _inputBuf[4096];$/;"	v
+actions_	../ansi_mvc/src/controller/controller.h	/^	std::map<char, std::function<void()>> actions_;$/;"	m	class:Controller
+addAction	../ansi_mvc/src/controller/controller.cpp	/^bool Controller::addAction(char ch, std::function<void()> action)$/;"	f	class:Controller
+addChild	../ptrtest/src/container.cpp	/^void Container::addChild(const std::string& name, Child&& child)$/;"	f	class:Container
+addChild	../ptrtest/src/container.cpp	/^void Container::addChild(const std::string& name, const Child& child)$/;"	f	class:Container
+childName_	../ptrtest/src/child.h	/^	std::string childName_;$/;"	m	class:Child
+children_	../ptrtest/src/container.h	/^	std::map<std::string, std::shared_ptr<Child>> children_;$/;"	m	class:Container
+clear	../ansi_console_lib/src/region.cpp	/^void Region::clear()$/;"	f	class:Region
+clearScreen	../ansi_console_lib/src/ansi_screen.cpp	/^void AnsiScreen::clearScreen()$/;"	f	class:AnsiScreen
+clearScreen	../ansi_mvc/src/view/view.cpp	/^void View::clearScreen()$/;"	f	class:View
+columns	../ansi_console_lib/src/ansi_screen.h	/^	int columns() const { return columns_; }$/;"	f	class:AnsiScreen
+columns	../ansi_mvc/src/view/view.h	/^	int columns() const { return columns_; }$/;"	f	class:View
+columns_	../ansi_console_lib/src/ansi_screen.h	/^	int columns_;$/;"	m	class:AnsiScreen
+columns_	../ansi_mvc/src/view/view.h	/^	int columns_;$/;"	m	class:View
+contanerFunc_	../ptrtest/src/child.h	/^	std::function<void(const std::string&)> contanerFunc_;$/;"	m	class:Child
+contents_	../ansi_console_lib/src/region.h	/^	std::vector<std::string> contents_;$/;"	m	class:Region
+contents_	../ansi_mvc/src/model/model.h	/^	std::vector<std::string> contents_;$/;"	m	class:Model
+countRefs	../ptrtest/src/container.cpp	/^void Container::countRefs(const std::string& name) const$/;"	f	class:Container
+createRegion	../ansi_console_lib/src/ansi_screen.cpp	/^CreateRes AnsiScreen::createRegion(const std::string& regionName, int left, int top, int width, int height)$/;"	f	class:AnsiScreen
+currPos_	../ansi_mvc/src/model/model.h	/^	std::pair<int, int> currPos_;$/;"	m	class:Model
+db_	../ansi_mvc/src/rdb/rdb.h	/^	sqlite::database db_;$/;"	m	class:RDBData
+debug	../ansi_mvc/src/rdb/rdb.cpp	/^void RDBData::debug() const$/;"	f	class:RDBData
+details	../ansi_mvc/src/rdb/rdb.h	/^	std::string details;$/;"	m	struct:DBEntry
+docPath	../ansi_mvc/src/model/model.cpp	/^const char docPath[] = "\/home\/art\/.vimrc";$/;"	v
+drawBox	../ansi_console_lib/src/ansi_screen.cpp	/^void AnsiScreen::drawBox(int x, int y, int wx, int wy)$/;"	f	class:AnsiScreen
+drawBox	../ansi_mvc/src/view/view.cpp	/^void View::drawBox(int x, int y, int wx, int wy)$/;"	f	class:View
+drawHLine	../ansi_console_lib/src/ansi_screen.cpp	/^void AnsiScreen::drawHLine(int y, int xFrom, int xTo, Separators separators)$/;"	f	class:AnsiScreen
+drawHLine	../ansi_mvc/src/view/view.cpp	/^void View::drawHLine(int y, int xFrom, int xTo, Separators separators)$/;"	f	class:View
+drawVLine	../ansi_console_lib/src/ansi_screen.cpp	/^void AnsiScreen::drawVLine(int x, int yFrom, int yTo, Separators separators)$/;"	f	class:AnsiScreen
+drawVLine	../ansi_mvc/src/view/view.cpp	/^void View::drawVLine(int x, int yFrom, int yTo, Separators separators)$/;"	f	class:View
+entries	../ansi_mvc/src/rdb/rdb.h	/^	const std::vector<DBEntry>& entries() const { return entries_; }$/;"	f	class:RDBData
+entries_	../ansi_mvc/src/rdb/rdb.h	/^	std::vector<DBEntry> entries_;$/;"	m	class:RDBData
+findChild	../ptrtest/src/container.cpp	/^std::shared_ptr<Child>& Container::findChild(const std::string& name)$/;"	f	class:Container
+fromX_	../ansi_mvc/src/model/model.h	/^	int fromX_;$/;"	m	class:Model
+fromY_	../ansi_mvc/src/model/model.h	/^	int fromY_;$/;"	m	class:Model
+getAll	../ansi_mvc/src/rdb/rdb.cpp	/^const char *RDBData::getAll = "select rowid,* from reminders;";$/;"	m	class:RDBData	file:
+getAll	../ansi_mvc/src/rdb/rdb.h	/^	static const char *getAll;$/;"	m	class:RDBData
+gotoPoint	../ansi_console_lib/src/ansi_screen.cpp	/^bool AnsiScreen::gotoPoint(std::string pointName) const $/;"	f	class:AnsiScreen
+gotoPoint	../ansi_mvc/src/view/view.cpp	/^bool View::gotoPoint(std::string pointName) const$/;"	f	class:View
+handleKeyboard	../ansi_console_lib/src/region.cpp	/^RegionCmd Region::handleKeyboard()$/;"	f	class:Region
+height_	../ansi_console_lib/src/region.h	/^    int height_;$/;"	m	class:Region
+height_	../ansi_mvc/src/model/model.h	/^	int height_;$/;"	m	class:Model
+hint	../ansi_mvc/src/rdb/rdb.h	/^	std::string hint; $/;"	m	struct:DBEntry
+id	../ansi_mvc/src/rdb/rdb.h	/^	int id;$/;"	m	struct:DBEntry
+init	../ansi_console_lib/src/ansi_screen.cpp	/^void AnsiScreen::init()$/;"	f	class:AnsiScreen
+init	../ansi_mvc/src/view/view.cpp	/^void View::init()$/;"	f	class:View
+introduce	../ptrtest/src/container.cpp	/^void Container::introduce(const std::string& who)$/;"	f	class:Container
+keepRunning_	../ansi_mvc/src/controller/controller.h	/^	bool keepRunning_;$/;"	m	class:Controller
+left_	../ansi_console_lib/src/region.h	/^	int left_;$/;"	m	class:Region
+loadContent	../ansi_console_lib/src/region.cpp	/^bool Region::loadContent(std::string& source)$/;"	f	class:Region
+loadContent	../ansi_mvc/src/model/model.cpp	/^bool Model::loadContent()$/;"	f	class:Model
+login	../ansi_mvc/src/rdb/rdb.h	/^	std::string login; $/;"	m	struct:DBEntry
+main	../ansi_lib_test/src/ast.cpp	/^int main(int argc, char** argv)$/;"	f
+main	../ansi_mvc_test/src/mvctest.cpp	/^int main()$/;"	f
+main	../ptrtest/src/tester.cpp	/^int main()$/;"	f
+markSelected	../ansi_mvc/src/model/model.cpp	/^void Model::markSelected()$/;"	f	class:Model
+md5	../ansi_mvc/src/rdb/rdb.h	/^	std::string md5; $/;"	m	struct:DBEntry
+moveCursor	../ansi_console_lib/src/ansi_screen.cpp	/^void AnsiScreen::moveCursor(int x, int y) const$/;"	f	class:AnsiScreen
+moveCursor	../ansi_console_lib/src/ansi_screen.h	/^    void moveCursor(const Point& point) const { moveCursor(point.first, point.second); }$/;"	f	class:AnsiScreen
+moveCursor	../ansi_console_lib/src/region.h	/^	std::function<void(int, int)> moveCursor;$/;"	m	class:Region
+moveCursor	../ansi_mvc/src/model/model.h	/^	bool moveCursor()  const { return moveCursor_; }$/;"	f	class:Model
+moveCursor	../ansi_mvc/src/view/view.cpp	/^void View::moveCursor(int x, int y) const$/;"	f	class:View
+moveCursor	../ansi_mvc/src/view/view.h	/^    void moveCursor(const Point& point) const { moveCursor(point.first, point.second); }$/;"	f	class:View
+moveCursor_	../ansi_mvc/src/model/model.h	/^	bool moveCursor_;$/;"	m	class:Model
+moveDown	../ansi_console_lib/src/region.cpp	/^void Region::moveDown()$/;"	f	class:Region
+moveDown	../ansi_mvc/src/model/model.cpp	/^void Model::moveDown()$/;"	f	class:Model
+moveDown	../ansi_mvc/src/view/view.cpp	/^void View::moveDown() const$/;"	f	class:View
+moveFunc_	../ansi_mvc/src/model/model.h	/^	std::function<void(int, int)> moveFunc_;$/;"	m	class:Model
+moveLeft	../ansi_console_lib/src/region.cpp	/^void Region::moveLeft()$/;"	f	class:Region
+moveLeft	../ansi_mvc/src/model/model.cpp	/^void Model::moveLeft()$/;"	f	class:Model
+moveLeft	../ansi_mvc/src/view/view.cpp	/^void View::moveLeft() const$/;"	f	class:View
+moveRight	../ansi_console_lib/src/region.cpp	/^void Region::moveRight()$/;"	f	class:Region
+moveRight	../ansi_mvc/src/model/model.cpp	/^void Model::moveRight()$/;"	f	class:Model
+moveRight	../ansi_mvc/src/view/view.cpp	/^void View::moveRight() const$/;"	f	class:View
+moveUp	../ansi_console_lib/src/region.cpp	/^void Region::moveUp()$/;"	f	class:Region
+moveUp	../ansi_mvc/src/model/model.cpp	/^void Model::moveUp()$/;"	f	class:Model
+moveUp	../ansi_mvc/src/view/view.cpp	/^void View::moveUp() const$/;"	f	class:View
+name	../ansi_mvc/src/rdb/rdb.h	/^	std::string name; $/;"	m	struct:DBEntry
+needRefresh	../ansi_mvc/src/model/model.h	/^	bool needRefresh() const { return needRefresh_; }$/;"	f	class:Model
+needRefresh_	../ansi_mvc/src/model/model.h	/^	bool needRefresh_;$/;"	m	class:Model
+points_	../ansi_console_lib/src/ansi_screen.h	/^	Points points_;$/;"	m	class:AnsiScreen
+points_	../ansi_mvc/src/view/view.h	/^	Points points_;$/;"	m	class:View
+prevRow_	../ansi_mvc/src/model/model.h	/^	int prevRow_;$/;"	m	class:Model
+read	../ansi_mvc/src/rdb/rdb.cpp	/^bool RDBData::read()$/;"	f	class:RDBData
+refresh	../ansi_console_lib/src/region.cpp	/^void Region::refresh()$/;"	f	class:Region
+regions_	../ansi_console_lib/src/ansi_screen.h	/^	Regions regions_;$/;"	m	class:AnsiScreen
+restoreCursor	../ansi_console_lib/src/ansi_screen.cpp	/^void AnsiScreen::restoreCursor() const$/;"	f	class:AnsiScreen
+restoreCursor	../ansi_console_lib/src/region.h	/^	std::function<void()> restoreCursor;$/;"	m	class:Region
+restoreCursor	../ansi_mvc/src/view/view.cpp	/^void View::restoreCursor() const$/;"	f	class:View
+rows	../ansi_console_lib/src/ansi_screen.h	/^	int rows() const { return rows_; }$/;"	f	class:AnsiScreen
+rows	../ansi_mvc/src/view/view.h	/^	int rows() const { return rows_; }$/;"	f	class:View
+rows_	../ansi_console_lib/src/ansi_screen.h	/^	int rows_;$/;"	m	class:AnsiScreen
+rows_	../ansi_mvc/src/view/view.h	/^	int rows_;$/;"	m	class:View
+saveCursor	../ansi_console_lib/src/ansi_screen.cpp	/^void AnsiScreen::saveCursor() const$/;"	f	class:AnsiScreen
+saveCursor	../ansi_console_lib/src/region.h	/^	std::function<void()> saveCursor;$/;"	m	class:Region
+saveCursor	../ansi_mvc/src/view/view.cpp	/^void View::saveCursor() const$/;"	f	class:View
+savePoint	../ansi_console_lib/src/ansi_screen.cpp	/^void AnsiScreen::savePoint(std::string pointName, Point& point)$/;"	f	class:AnsiScreen
+savePoint	../ansi_console_lib/src/ansi_screen.cpp	/^void AnsiScreen::savePoint(std::string pointName, Point&& point)$/;"	f	class:AnsiScreen
+savePoint	../ansi_console_lib/src/ansi_screen.h	/^    void savePoint(std::string pointName, int x, int y) { savePoint(pointName, Point(x, y)); }$/;"	f	class:AnsiScreen
+savePoint	../ansi_mvc/src/view/view.cpp	/^void View::savePoint(std::string pointName, Point& point)$/;"	f	class:View
+savePoint	../ansi_mvc/src/view/view.cpp	/^void View::savePoint(std::string pointName, Point&& point)$/;"	f	class:View
+savePoint	../ansi_mvc/src/view/view.h	/^    void savePoint(std::string pointName, int x, int y) { savePoint(pointName, Point(x, y)); }$/;"	f	class:View
+sayMyName	../ptrtest/src/child.cpp	/^void Child::sayMyName()$/;"	f	class:Child
+setContainerFunc	../ptrtest/src/child.cpp	/^void Child::setContainerFunc(std::function<void(const std::string&)> func)$/;"	f	class:Child
+setDimensions	../ansi_mvc/src/view/view.cpp	/^void View::setDimensions(int rows, int columns)$/;"	f	class:View
+setMode	../ansi_console_lib/src/ansi_screen.cpp	/^void AnsiScreen::setMode(Mode mode)$/;"	f	class:AnsiScreen
+setMode	../ansi_console_lib/src/region.h	/^	std::function<void(Mode)> setMode;$/;"	m	class:Region
+setMode	../ansi_mvc/src/view/view.cpp	/^void View::setMode(Mode mode)$/;"	f	class:View
+setMoveCursor	../ansi_console_lib/src/region.h	/^	void setMoveCursor(std::function<void(int, int)> pMoveCursor) { moveCursor = pMoveCursor; }$/;"	f	class:Region
+setRestoreCursor	../ansi_console_lib/src/region.h	/^	void setRestoreCursor(std::function<void()> pRestoreCursor) { restoreCursor = pRestoreCursor; }$/;"	f	class:Region
+setSaveCursor	../ansi_console_lib/src/region.h	/^	void setSaveCursor(std::function<void()> pSaveCursor) { saveCursor = pSaveCursor; }$/;"	f	class:Region
+setSetMode	../ansi_console_lib/src/region.h	/^	void setSetMode(std::function<void(Mode)> pSetMode) { setMode = pSetMode; }$/;"	f	class:Region
+setViewArea	../ansi_mvc/src/model/model.cpp	/^void Model::setViewArea(int width, int height, int fromX, int fromY, std::function<void(int,int)> moveFunc)$/;"	f	class:Model
+showViewModel	../ansi_mvc/src/model/model.cpp	/^void Model::showViewModel()$/;"	f	class:Model
+startHandler	../ansi_mvc/src/controller/controller.cpp	/^void Controller::startHandler()$/;"	f	class:Controller
+stopHandler	../ansi_mvc/src/controller/controller.cpp	/^void Controller::stopHandler()$/;"	f	class:Controller
+top_	../ansi_console_lib/src/region.h	/^	int top_;$/;"	m	class:Region
+type	../ansi_mvc/src/rdb/rdb.h	/^	std::string type; $/;"	m	struct:DBEntry
+usesAltScreen_	../ansi_mvc/src/view/view.h	/^	bool usesAltScreen_;$/;"	m	class:View
+viewBottom_	../ansi_console_lib/src/region.h	/^	int viewBottom_;$/;"	m	class:Region
+viewLeft_	../ansi_console_lib/src/region.h	/^	int viewLeft_;$/;"	m	class:Region
+viewTop_	../ansi_console_lib/src/region.h	/^	int viewTop_;$/;"	m	class:Region
+width_	../ansi_console_lib/src/region.h	/^    int width_;$/;"	m	class:Region
+width_	../ansi_mvc/src/model/model.h	/^	int width_;$/;"	m	class:Model
+wiper_	../ansi_mvc/src/model/model.h	/^	std::string wiper_;$/;"	m	class:Model
+xOffset_	../ansi_console_lib/src/region.h	/^	int xOffset_;$/;"	m	class:Region
+xOffset_	../ansi_mvc/src/model/model.h	/^	int xOffset_;$/;"	m	class:Model
+yOffset_	../ansi_console_lib/src/region.h	/^	int yOffset_;$/;"	m	class:Region
+yOffset_	../ansi_mvc/src/model/model.h	/^	int yOffset_;$/;"	m	class:Model
+~AnsiScreen	../ansi_console_lib/src/ansi_screen.cpp	/^AnsiScreen::~AnsiScreen()$/;"	f	class:AnsiScreen
+~View	../ansi_mvc/src/view/view.cpp	/^View::~View() {$/;"	f	class:View

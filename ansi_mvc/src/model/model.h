@@ -3,6 +3,7 @@
 #include <string>
 #include <vector>
 #include <functional>
+#include <memory>
 
 class Model
 {
@@ -34,8 +35,11 @@ public:
 	bool moveCursor()  const { return moveCursor_; }
 
 	void setViewArea(int width, int height, int fromX, int fromY, std::function<void(int,int)> moveFunc);
-	bool loadContent();
-	void showViewModel();
+	bool loadContent(std::vector<std::string>&& src);
+	void showViewModel(bool markSelected = true);
+
+	// For possible control of other regions
+	const std::string& getSelected() const;
 
 private:
 	void markSelected();
