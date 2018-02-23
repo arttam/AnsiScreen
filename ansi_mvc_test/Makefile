@@ -4,7 +4,7 @@ LFLAGS=-L../ansi_mvc/lib -lansicontroller -lansimodel -lansiview -lrdbmodel -Wl,
 SRC=$(wildcard src/*.cpp)
 OBJ=$(addprefix obj/, $(notdir $(SRC:.cpp=.o)))
 
-all: clean run
+all: clean mvc
 
 mvc: $(OBJ) | bin
 	$(CC) $(LFLAGS) -o bin/$@ $^

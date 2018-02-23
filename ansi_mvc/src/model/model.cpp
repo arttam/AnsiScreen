@@ -46,18 +46,19 @@ void Model::moveUp()
 void Model::moveDown()
 {
 	needRefresh_ = false;
-	moveCursor_  = true;
-	if (currPos_.second >= height_ - 1) {
-		moveCursor_ = false;
+	moveCursor_  = false;
+	if (currPos_.second >= height_ - 1) { // Text has more lines than view area	-> "scrolling"
 		if (yOffset_ < static_cast<int>(contents_.size()) - height_) {
 			++yOffset_;
 			needRefresh_ = true;
 		}
 	}
 	else {
-		//++currPos_.second;
-		prevRow_ = currPos_.second++;
-		markSelected();
+		if (currPos_.second < static_cast<int>(contents_.size()) - 1) {
+			moveCursor_ = true;
+			prevRow_ = currPos_.second++;
+			markSelected();
+		}
 	}
 }
 

@@ -41,7 +41,7 @@ int main()
 		return 1;
 	}
     
-	list.setViewArea(_listPane - 2, view.rows() - 3, 2, 2, [&view](int x, int y) { view.moveCursor(x, y); });
+	list.setViewArea(_listPane - 2, view.rows() - 4, 2, 2, [&view](int x, int y) { view.moveCursor(x, y); });
 	list.showViewModel();
 	view.gotoPoint("LeftTop");
 
@@ -93,15 +93,34 @@ int main()
         details.showViewModel(false);
 	};
 
+    auto entryDown = [&entry, &view]() {
+        entry.moveDown();
+        if (entry.moveCursor()) {
+            view.moveDown();
+        }
+    };
+
+    auto entryUp = [&entry, &view]() {
+        entry.moveUp();
+        if (entry.moveCursor()) {
+            view.moveUp();
+        }
+    };
+
 	Controller controller;
-	controller.addAction('q', [&controller]() { controller.stopHandler(); });
-	controller.addAction('j', moveDown);
-	controller.addAction('k', moveUp);
+    // list view
+	controller.addAction("list", 'q', [&controller]() { controller.stopHandler(); });
+	controller.addAction("list", 'j', moveDown);
+	controller.addAction("list", 'k', moveUp);
+    controller.addAction("list", 'l', [&controller, &entry]() { entry.showViewModel(); controller.currentModel("entry"); });
+    // details view
+    controller.addAction("entry", 'j', entryDown);
+    controller.addAction("entry", 'k', entryUp);
+    controller.addAction("entry", 'h', [&controller, &entry]() { entry.showViewModel(false); controller.currentModel("list"); });
 
 	view.setMode(Mode::Normal);
+    controller.currentModel("list");
 	controller.startHandler();
-
-	std::cin.get();
 
 	return 0;
 }
