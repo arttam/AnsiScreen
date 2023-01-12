@@ -2,8 +2,8 @@
 #include <fstream>
 #include <iterator>
 
-#include "../../ansi_console_lib/src/ansi_screen.h"
-#include "../../ansi_console_lib/src/region.h"
+#include "ansi_screen.h"
+#include "region.h"
 
 int main(int argc, char** argv)
 {
